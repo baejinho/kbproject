@@ -75,19 +75,19 @@ export default class Day2 extends Component {
 
 
 
-          <div style={{fontFamily: "Mark Pro Heavy", fontSize: 30, fontWeight:"bold"}}>소스 샘플 보기</div>
+          <div style={{fontFamily: "Mark Pro Heavy", fontSize: 30, fontWeight:"bold", marginTop:20 }}>소스 샘플 보기</div>
      
 
           <div style={{ fontSize: 20, marginTop:20}}>
             <Button onClick={()=>{
               this.props.history.push("/day2statesample");
             }}>State Sample</Button>
-               <Button onClick={()=>{
+               <Button style={{marginLeft:20}} onClick={()=>{
               this.props.history.push("/day2dbsample");
-            }}>State Sample</Button>
-               <Button onClick={()=>{
+            }}>DB Sample</Button>
+               <Button style={{marginLeft:20}}  onClick={()=>{
               this.props.history.push("/day2csssample");
-            }}>State Sample</Button>
+            }}>CSS Sample</Button>
           </div>  
      </div>);
   }

@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 
 import "./accounts"
+import "/imports/api/rest";
 import "/imports/api/methods";
 
 

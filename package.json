@@ -12,6 +12,7 @@
     "@babel/runtime": "^7.0.0",
     "antd": "4.12.2",
     "bcrypt": "^1.0.3",
+    "body-parser": "^1.19.1",
     "fiber": "^1.0.4",
     "fibers": "^5.0.0",
     "intl": "^1.2.5",
