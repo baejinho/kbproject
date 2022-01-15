@@ -1,11 +1,33 @@
 import React, { Component } from 'react';
 
+import {
+  Upload,
+  Icon,
+  Button,
+  Switch,
+  Input,
+  Modal,
+  Form,
+  Select,
+  Table,
+  Card,
+  Col,
+  Row,
+  Checkbox
+} from "antd";
  
 import "./Day2.scss";  
  
 
 export default class Day2 extends Component {
+  state = {
     
+  }
+
+  componentDidMount() { 
+  } 
+
+
   render() { 
 
     return (
@@ -49,6 +71,13 @@ export default class Day2 extends Component {
           <div style={{ fontSize: 20, marginTop:20}}>
            <a href="https://github.com/nvm-sh/nvm/blob/master/README.md">https://github.com/nvm-sh/nvm/blob/master/README.md</a> <br />
            nvm은 node.js 용 버전 관리자로 , 사용자별로 설치되고 쉘별로 호출되도록 설계
+          </div>  
+
+
+          <div style={{ fontSize: 20, marginTop:20}}>
+            <Button onClick={()=>{
+              this.props.history.push("/day2statesample");
+            }}>State Sample</Button>
           </div>  
      </div>);
   }

@@ -9,10 +9,9 @@ export default class Home extends Component {
   }
 
   componentDidMount() { 
-  }
-  fetchReleases = () =>{
-    
   } 
+
+
   render() { 
 
     return (
@@ -20,7 +19,9 @@ export default class Home extends Component {
         <div>
           본 사이트는 강의용 사이트 입니다.
         </div>
-
+        <div>
+          
+        </div>
         <div style={{ width: "100%", padding:100, display:"flex", justifyContent:"center", alignItems:"center"}}>
           <img
             style={{ width: 500 }}

@@ -14,6 +14,7 @@ import { createBrowserHistory } from "history";
 
 import HomePage from "../pages/Home"; 
 import Day2 from "../pages/Day2";
+import Day2StateSample from "../pages/Day2StateSample";
 import Day3 from "../pages/Day3";
 import Day1 from "../pages/Day1";
    
@@ -214,6 +215,11 @@ class Footer extends Component {
             />  
             <Route exact path="/day2" 
             render={(props) => <Day2 {...props}  
+            />}
+            />  
+
+            <Route exact path="/day2statesample" 
+            render={(props) => <Day2StateSample {...props}  
             />}
             />  
             <Route exact path="/day3" 
