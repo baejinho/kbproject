@@ -15,6 +15,8 @@ import { createBrowserHistory } from "history";
 import HomePage from "../pages/Home"; 
 import Day2 from "../pages/Day2";
 import Day2StateSample from "../pages/Day2StateSample";
+import Day2DBSample from "../pages/Day2DBSample";
+import Day2CSSSample from "../pages/Day2CSSSample";
 import Day3 from "../pages/Day3";
 import Day1 from "../pages/Day1";
    
@@ -222,6 +224,17 @@ class Footer extends Component {
             render={(props) => <Day2StateSample {...props}  
             />}
             />  
+
+            <Route exact path="/day2dbsample" 
+            render={(props) => <Day2DBSample {...props}  
+            />}
+            /> 
+
+            <Route exact path="/day2csssample" 
+            render={(props) => <Day2CSSSample {...props}  
+            />}
+            /> 
+
             <Route exact path="/day3" 
             render={(props) => <Day3 {...props}  
             />}

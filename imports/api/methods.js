@@ -3,6 +3,7 @@
 import { Meteor } from "meteor/meteor";
 import { Accounts } from "meteor/accounts-base"; 
 
+import Sample from './sample'; 
 import Users from './users'; 
 import { Email } from 'meteor/email'
 //import {Storage} from '@google-cloud/storage';
@@ -12,7 +13,28 @@ import _ from "lodash";
 
 
 Meteor.methods({
-  
+  "sample.save"({ index }) { 
+
+    Sample.update(
+      {
+        type:"sample"
+      },
+      {
+        $set: {
+          type:"sample",
+          index
+        }
+      },
+      { upsert: true }
+    );
+ 
+  },
+  "sample.load"({ }) {
+    let ret = Sample.findOne({
+      type:"sample"
+    });
+    return ret;
+  },
 
   "users.validAdminEmail"({ email }) {
     console.log(email);
