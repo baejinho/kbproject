@@ -1,0 +1,30 @@
+{
+    "appName": "dtkb",
+    "appLocation": {
+        "git": "https://github.com/baejinho/infra-lecture.git",
+        "branch": "master"
+    },
+    "meteorSettingsLocation": "/Users/baejinho/Documents/kb/dtkb/.dev-deploy/settings.json",
+    "meteorSettingsInRepo": false,
+    "prebuildScript": "meteor npm install  --save",
+    "meteorBuildFlags": "--architecture os.linux.x86_64",
+    "env": {
+    "ROOT_URL": "http://3.144.127.167",
+    "PORT": "3000",
+    "MONGO_URL": "mongodb://infra:infra@localhost:27017/infra"
+    },
+    "server": {
+        "host": "3.144.127.167",
+        "username": "ec2-user",
+        "deploymentDir": "/opt/infra",
+        "pem": "~/Downloads/han.pem",
+        "nvm": {
+            "bin": "~/.nvm/nvm.sh",
+            "use": "8.8.1"
+        },
+        "exec_mode": "cluster_mode",
+        "instances": "4", 
+        "interactiveAuth": true
+    },
+    "allowUndeploy": true
+}

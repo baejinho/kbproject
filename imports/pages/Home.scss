@@ -1,0 +1,43 @@
+ 
+
+.homeMainPC{
+   background:#0c0c0c;
+   width:100%;
+   height: 100%;
+   .mainTitle{
+      color: #00ff70;
+      font-size:25px;
+      font-family:"Mark Pro Heavy"; 
+      letter-spacing: 6.6px; 
+      padding-left: 10px;
+      padding-right: 20px;
+      padding-bottom: 0px;
+      height: 33px;
+      display: inline-block;
+   }
+}
+.homeMobile{
+   display: none;
+}
+ 
+
+ @media only screen and (max-device-width: 700px) {
+   .homeMainPC{
+      display: none;
+   }
+   .homeMobile{
+      display: block;
+
+      .mainTitle{
+         color: #00ff70;
+         font-size:16px;
+         font-family:"Mark Pro Heavy";
+         letter-spacing: 5.6px; 
+         padding-left: 5px;
+         padding-right: 5px;
+         padding-bottom: 0px;
+         height: 21px;
+         display: inline-block;
+      }
+   }
+ }

@@ -1,0 +1,33 @@
+{
+  "name": "dtkb",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "deploy:dev": "cd .dev-deploy && pm2-meteor deploy",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.0.0",
+    "antd": "4.12.2",
+    "bcrypt": "^1.0.3",
+    "fiber": "^1.0.4",
+    "fibers": "^5.0.0",
+    "intl": "^1.2.5",
+    "meteor-node-stubs": "^0.4.1",
+    "pm2": "^4.5.4",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-intl": "^5.12.1",
+    "react-router-dom": "^5.2.0",
+    "simpl-schema": "^1.10.2"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  }
+}
