@@ -26,18 +26,25 @@ export default class Day2DBSample extends Component {
   }
 
   componentDidMount() { 
+    console.log("componentDidMount");
   } 
 
-  load(){
+  load=()=>{
+    console.log("load method");
     Meteor.call("sample.load", {  }, (error, result) => {
       if (error) {
-          
+        Modal.info({title:"에러가 났습니다."});
       } else { 
-        this.setState({index: result.index})
+        if(result&&result.index){
+          this.setState({index: result.index})
+        }else{
+          Modal.info({title:"에러가 났습니다."});
+        }
+
       }
     });
   }
-  save(){
+  save=()=>{
     Meteor.call("sample.save", { index: this.state.index }, (error, result) => {
       if (error) {
          

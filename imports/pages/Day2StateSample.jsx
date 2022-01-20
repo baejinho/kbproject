@@ -37,7 +37,7 @@ export default class Day2StateSample extends Component {
      
           <div style={{ fontSize: 20, marginTop:20}}>
             <Button onClick={()=>{
-                let {index} = this.state;
+                let index = this.state.index;
                 this.setState({index:++index})
               }}>값 증가</Button>
             <Button onClick={()=>{
@@ -49,7 +49,7 @@ export default class Day2StateSample extends Component {
                 this.setState({index:--index})
               }}>값 감소</Button>
              <Button onClick={()=>{
-                   let {index} = this.state;
+                   
                 this.setState({index:0})
               }}>값 초기화</Button>
           </div>

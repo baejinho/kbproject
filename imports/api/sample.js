@@ -13,7 +13,7 @@ Sample.attachSchema(
       }, 
       index: {
         type:  Number 
-      }, 
+      }
     })
   )
 );

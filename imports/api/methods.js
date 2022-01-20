@@ -14,7 +14,7 @@ import _ from "lodash";
 
 Meteor.methods({
   "sample.save"({ index }) { 
-
+    
     Sample.update(
       {
         type:"sample"
@@ -30,9 +30,23 @@ Meteor.methods({
  
   },
   "sample.load"({ }) {
+    console.log("sample.load");
+   
+    /*
+    let ret = Sample.find({
+      type:"sample"
+    }).fetch();
+
+    console.log("sample.load : Result == >", ret[0].type);
+*/
+    
     let ret = Sample.findOne({
       type:"sample"
     });
+
+    console.log("sample.load : Result == >", ret);
+    
+   
     return ret;
   },
 

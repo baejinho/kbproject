@@ -40,7 +40,7 @@ class Header extends Component {
     let color = "#FFFFFF";
     let selectedcolor = "#00ff70";
  
-    return ( <div style={{minWidth:1290,width:1290, margin:"0px auto",background:"#000000", display:"flex",justifyContent:"space-between",
+    return ( <div style={{minWidth:1290,width:1290, margin:"0px auto",background:"black", display:"flex",justifyContent:"space-between",
   alignItems: "center"}}>
       
         <div
