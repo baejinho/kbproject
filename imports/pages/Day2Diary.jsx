@@ -22,11 +22,32 @@ import "./Day2Diary.scss";
 export default class Day2Diary extends Component {
     
   state = {
-    
+    diaryList: []
   } 
 
   componentDidMount() { 
+    this.load();
   } 
+
+  load=()=>{
+     
+    console.log("load method");
+    Meteor.call("diary.load", {  }, (error, result) => {
+      if (error) {
+        Modal.info({title:"에러가 났습니다."});
+      } else { 
+        if(result){
+
+          console.log(result);
+          this.setState({diaryList: result})
+        }else{
+          Modal.info({title:"에러가 났습니다."});
+        }
+
+      }
+    });
+
+  }
 
   render() { 
 

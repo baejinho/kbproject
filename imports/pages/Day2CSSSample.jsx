@@ -78,6 +78,8 @@ export default class Day2CSSSample extends Component {
 
   render() { 
 
+    console.log(this.state.imageList);
+
     return (
       <div style={{padding:150, color:"white"}}>
         <div style={{display:"flex", flexDirection:"row",  justifyContent:"flex-end"}}>
@@ -91,7 +93,11 @@ export default class Day2CSSSample extends Component {
         </div>
         {this.state.gridtype=="grid"?
         <div style={{display:"flex", flexDirection:"row",  justifyContent:"center", alignItems:"center", flexWrap:"wrap"}}>
-          {this.state.imageList.map((item)=>{
+          {this.state.imageList.map((item, index)=>{
+            console.log("index::", index, item);
+            console.log("item.image::", item.image);
+            console.log("item.imageName::", item.imageName);
+            console.log("item.imageDesc::", item.imageDesc);
             return <div style={{width:"30%", padding:10}}>
             <div style={{ width: "100%", color:"white", fontSize:13, textAlign:"center"}}>
               <img
@@ -108,6 +114,7 @@ export default class Day2CSSSample extends Component {
 </div>: 
 <div style={{display:"flex",  flexDirection:"column", justifyContent:"center", alignItems:"center", flexWrap:"wrap"}}>
   {this.state.imageList.map((item)=>{
+
       return <div style={{width:"100%", padding:10, display:"flex",  flexDirection:"row", borderBottom:"solid 1px gray"}}>
     <div style={{ width: "20%", color:"white", fontSize:15, textAlign:"left"}}>
       <img

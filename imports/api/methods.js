@@ -33,11 +33,9 @@ Meteor.methods({
     );
  
   },
-  "moenyManage.load"({ }) {
+  "moneyManage.load"({ }) {
     
    
-    
-    
     let ret = MoneyManage.find({
       
     }).fetch();
@@ -61,7 +59,7 @@ Meteor.methods({
     
    
     
-    let ret = Schedule.find({
+    let ret = Diary.find({
       
     }).fetch();
  

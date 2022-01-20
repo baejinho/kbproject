@@ -22,11 +22,29 @@ import "./Day2Schedule.scss";
 export default class Day2Schedule extends Component {
     
   state = {
-    
+    scheduleList : []
   } 
 
   componentDidMount() { 
+    this.load();
   } 
+  load=()=>{
+    console.log("load method");
+    Meteor.call("schedule.load", {  }, (error, result) => {
+      if (error) {
+        Modal.info({title:"에러가 났습니다."});
+      } else { 
+        if(result){
+
+          console.log(result);
+          this.setState({scheduleList: result})
+        }else{
+          Modal.info({title:"에러가 났습니다."});
+        }
+
+      }
+    });
+  }
 
   render() { 
 

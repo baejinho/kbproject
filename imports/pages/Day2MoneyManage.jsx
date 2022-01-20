@@ -22,11 +22,30 @@ import "./Day2MoneyManage.scss";
 export default class Day2MoneyManage extends Component {
     
   state = {
-    
+    moneyList:[]
   } 
 
   componentDidMount() { 
+    this.load();
   } 
+
+  load=()=>{
+    console.log("load method");
+    Meteor.call("moneyManage.load", {  }, (error, result) => {
+      if (error) {
+        Modal.info({title:"에러가 났습니다."});
+      } else { 
+        if(result){
+
+          console.log(result);
+          this.setState({moneyList: result})
+        }else{
+          Modal.info({title:"에러가 났습니다."});
+        }
+
+      }
+    });
+  }
 
   render() { 
 
