@@ -17,6 +17,10 @@ import Day2 from "../pages/Day2";
 import Day2StateSample from "../pages/Day2StateSample";
 import Day2DBSample from "../pages/Day2DBSample";
 import Day2CSSSample from "../pages/Day2CSSSample";
+import Day2Schedule from "../pages/Day2Schedule";
+import Day2Diary from "../pages/Day2Diary";
+import Day2MoneyManage from "../pages/Day2MoneyManage";
+
 import Day3 from "../pages/Day3";
 import Day1 from "../pages/Day1";
    
@@ -234,6 +238,24 @@ class Footer extends Component {
             render={(props) => <Day2CSSSample {...props}  
             />}
             /> 
+
+            <Route exact path="/day2schedule" 
+            render={(props) => <Day2Schedule {...props}  
+            />}
+            /> 
+
+            <Route exact path="/day2diary" 
+                        render={(props) => <Day2Diary {...props}  
+                        />}
+                        /> 
+
+            <Route exact path="/day2money" 
+                        render={(props) => <Day2MoneyManage {...props}  
+                        />}
+                        /> 
+                        
+
+
 
             <Route exact path="/day3" 
             render={(props) => <Day3 {...props}  

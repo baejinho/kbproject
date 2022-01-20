@@ -88,6 +88,18 @@ export default class Day2 extends Component {
                <Button style={{marginLeft:20}}  onClick={()=>{
               this.props.history.push("/day2csssample");
             }}>CSS Sample</Button>
+            <Button style={{marginLeft:20}}  onClick={()=>{
+              this.props.history.push("/day2schedule"); 
+            }}>Schedule Sample</Button>
+
+            <Button style={{marginLeft:20}}  onClick={()=>{
+              this.props.history.push("/day2diary"); 
+            }}>Diary Sample</Button>
+
+            <Button style={{marginLeft:20}}  onClick={()=>{
+              this.props.history.push("/day2money"); 
+            }}>Money Manage Sample</Button>
+
           </div>  
      </div>);
   }

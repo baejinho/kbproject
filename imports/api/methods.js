@@ -4,6 +4,10 @@ import { Meteor } from "meteor/meteor";
 import { Accounts } from "meteor/accounts-base"; 
 
 import Sample from './sample'; 
+
+import Diary from './diary'; 
+import Schedule from './schedule'; 
+import MoneyManage from './moneyManage'; 
 import Users from './users'; 
 import { Email } from 'meteor/email'
 //import {Storage} from '@google-cloud/storage';
@@ -29,23 +33,51 @@ Meteor.methods({
     );
  
   },
-  "sample.load"({ }) {
-    console.log("sample.load");
+  "moenyManage.load"({ }) {
+    
    
-    /*
-    let ret = Sample.find({
-      type:"sample"
+    
+    
+    let ret = MoneyManage.find({
+      
     }).fetch();
+ 
+   
+    return ret;
+  },
 
-    console.log("sample.load : Result == >", ret[0].type);
-*/
+  "schedule.load"({ }) {
+    
+   
+    let ret = Schedule.find({
+      
+    }).fetch();
+ 
+   
+    return ret;
+  },
+
+  "diary.load"({ }) {
+    
+   
+    
+    let ret = Schedule.find({
+      
+    }).fetch();
+ 
+   
+    return ret;
+  },
+
+  "sample.load"({ }) {
+    
+   
+    
     
     let ret = Sample.findOne({
       type:"sample"
     });
-
-    console.log("sample.load : Result == >", ret);
-    
+ 
    
     return ret;
   },
