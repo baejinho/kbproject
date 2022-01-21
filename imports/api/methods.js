@@ -62,10 +62,25 @@ Meteor.methods({
     
     let ret = Diary.find({
       
-    }).fetch();
+    }, { sort: { createdAt: -1 } }).fetch();
     console.log(ret);
    
     return ret;
+  },
+
+
+  "diary.save"({ title, content, image }) {
+    
+    let ret = Diary.insert(
+        {
+          diaryTitle:title,
+          diaryContent:content,
+          image:image,
+        } 
+    );
+
+    console.log(ret);
+
   },
 
   "photo.load"({ }) {
