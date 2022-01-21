@@ -88,7 +88,14 @@ export default class Day2 extends Component {
                <Button style={{marginLeft:20}}  onClick={()=>{
               this.props.history.push("/day2csssample");
             }}>CSS Sample</Button>
-            <Button style={{marginLeft:20}}  onClick={()=>{
+            
+
+          </div>  
+
+          <div style={{fontFamily: "Mark Pro Heavy", fontSize: 30, fontWeight:"bold", marginTop:20 }}>프로젝트 소스 샘플 보기</div>
+          <div style={{ fontSize: 20, marginTop:20}}>
+            
+            <Button style={{}}  onClick={()=>{
               this.props.history.push("/day2schedule"); 
             }}>Schedule Sample</Button>
 
@@ -99,6 +106,10 @@ export default class Day2 extends Component {
             <Button style={{marginLeft:20}}  onClick={()=>{
               this.props.history.push("/day2money"); 
             }}>Money Manage Sample</Button>
+
+         <Button style={{marginLeft:20}}  onClick={()=>{
+              this.props.history.push("/day2photo"); 
+            }}>Photo Album Sample</Button>
 
           </div>  
      </div>);

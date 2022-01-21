@@ -6,6 +6,7 @@ import { Accounts } from "meteor/accounts-base";
 import Sample from './sample'; 
 
 import Diary from './diary'; 
+import Photo from './photo'; 
 import Schedule from './schedule'; 
 import MoneyManage from './moneyManage'; 
 import Users from './users'; 
@@ -62,6 +63,18 @@ Meteor.methods({
     let ret = Diary.find({
       
     }).fetch();
+ 
+   
+    return ret;
+  },
+
+  "photo.load"({ }) {
+    
+    let ret = Photo.find({
+      
+    }).fetch();
+
+    console.log(ret);
  
    
     return ret;
