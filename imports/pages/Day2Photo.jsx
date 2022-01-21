@@ -59,6 +59,7 @@ export default class Day2Photo extends Component {
 
     return (
       <div style={{padding:150, color:"white"}}>
+         
         <div>사진첩 샘플</div>
         <div style={{}}>
           

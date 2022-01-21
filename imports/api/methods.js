@@ -39,12 +39,29 @@ Meteor.methods({
    
     let ret = MoneyManage.find({
       
-    }).fetch();
+     } , { sort: { useDate: -1 } }).fetch();
  
    
     return ret;
+
+ 
+
   },
 
+  "moneyManage.save"({ title, content, fee, useDate }) {
+    
+    let ret = MoneyManage.insert(
+        {
+          moneyTitle:title,
+          moneyContent:content,
+          fee:fee,
+          useDate:useDate,
+        } 
+    );
+
+    console.log(ret);
+
+  }, 
   "schedule.load"({ }) {
     
    
