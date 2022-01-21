@@ -13,7 +13,11 @@ Diary.attachSchema(
       },
       diaryContent : {
         type:  String 
-      }
+      },
+      image :  {
+        type:  String ,
+        optional: true
+      },
     })
   )
 );

@@ -18,6 +18,9 @@ import {
  
 import "./Day2Diary.scss";  
  
+import moment from "moment";
+
+import _ from "lodash";
 
 export default class Day2Diary extends Component {
     
@@ -54,8 +57,23 @@ export default class Day2Diary extends Component {
     return (
       <div style={{padding:150, color:"white"}}>
         <div>일기장 샘플</div>
-        <div style={{display:"flex", flexDirection:"row",  justifyContent:"flex-end"}}>
-
+        <div style={{display:"flex", flexDirection:"row" , flexWrap:"wrap", alignItems:"center", justifyContent:"center"}}>
+        
+          {_.map(this.state.diaryList, (item)=>{
+            return <div style={{width:"30%", height:250, position:"relative", margin:5 }}>
+            <div style={{position:"absolute", top:0, width:"100%", height: 250, zIndex: 0}}>
+                       <img
+                         style={{ width: "100%" , height:250}}
+                         src={item.image}
+                       /> 
+                      </div>
+                      <div style={{position:"absolute", top:0, width:"100%", padding:20, height: 250 , color:"black"}}>
+                      <div style={{fontSize:20}}>{item.diaryTitle}</div>
+                      <div style={{fontSize:24, fontWeight:"bold"}}>{item.diaryContent}</div>
+                     
+                     </div>
+                   </div>;
+          })}
           
         </div>
           

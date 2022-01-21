@@ -63,7 +63,7 @@ Meteor.methods({
     let ret = Diary.find({
       
     }).fetch();
- 
+    console.log(ret);
    
     return ret;
   },
