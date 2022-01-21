@@ -1,7 +1,7 @@
 {
     "appName": "dtkb",
     "appLocation": {
-        "git": "https://github.com/baejinho/infra-lecture.git",
+        "git": "https://github.com/baejinho/kbproject.git",
         "branch": "master"
     },
     "meteorSettingsLocation": "/Users/baejinho/Documents/kb/dtkb/.dev-deploy/settings.json",
@@ -11,12 +11,12 @@
     "env": {
     "ROOT_URL": "http://3.144.127.167",
     "PORT": "3000",
-    "MONGO_URL": "mongodb://infra:infra@localhost:27017/infra"
+    "MONGO_URL": "mongodb://kbproject:kbproject@localhost:27017/kbproject"
     },
     "server": {
         "host": "3.144.127.167",
         "username": "ec2-user",
-        "deploymentDir": "/opt/infra",
+        "deploymentDir": "/opt/kbproject",
         "pem": "~/Downloads/han.pem",
         "nvm": {
             "bin": "~/.nvm/nvm.sh",
