@@ -73,6 +73,22 @@ Meteor.methods({
     return ret;
   },
 
+
+  "schedule.save"({ title, content, startDate, endDate, status }) {
+    
+    let ret = Schedule.insert(
+        {
+          scheduleTitle:title,
+          scheduleContent:content,
+          scheduleStartDate:startDate,
+          scheduleEndDate:endDate,
+          status:status
+        } 
+    );
+
+    console.log(ret);
+
+  }, 
   "diary.load"({ }) {
     
    
